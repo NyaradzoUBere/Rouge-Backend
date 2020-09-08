@@ -23,8 +23,34 @@
 #     t.datetime "updated_at", precision: 6, null: false
 #   end
 
+require 'rest-client'
+require 'json'
+# require 'pry'
+
 base_url = "http://makeup-api.herokuapp.com/api/v1/products.json"
 
 data = RestClient.get(base_url)
 
-binding.pry
+
+product_data = JSON.parse(data)
+# binding.pry
+
+product_data.each do |product|
+    Product.create(
+        brand: product["brand"],
+        name: product["name"],
+        price: product["price"],
+        price_sign: product["price_sign"],
+        currency: product["currency"],
+        image_link: product["image_link"],
+        product_link: product["product_link"],
+        website_link: product["website_link"],
+        description: product["description"],
+        category: product["category"],
+        product_type: product["product_type"],
+        product_colors: product["product_colors"]
+    )
+end
+    
+
+# puts "hello"
