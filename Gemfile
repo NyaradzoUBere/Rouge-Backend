@@ -58,3 +58,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # res-client
 gem 'rest-client'
+gem 'pry'
+gem 'pry-byebug'
+gem 'pry-rails'
+gem 'pry-rescue'
+gem 'json'
