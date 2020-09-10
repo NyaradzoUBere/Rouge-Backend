@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
     def index
-        @products = Product.all.sample(10)
+        @products = Product.all.sample(30)
         render json: @products
     end
 
