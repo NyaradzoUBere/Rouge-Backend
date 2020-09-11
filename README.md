@@ -16,3 +16,6 @@ To access the full README and the front-end repo, please [click here](https://gi
 3. Run ~ rails db:{migrate,seed}
 4. Run ~ rails s to start your rails server.
 5. Refer to the [front-end README](https://github.com/NyaradzoUBere/Rouge-Frontend) for the rest of your setup!
+
+## License
+[View License](License.txt)
